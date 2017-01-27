@@ -24,4 +24,9 @@ export class PlayerService {
     return this.angularFire.database.object('players/' + playerKey);
   }
 
+  deletePlayer(player){
+    var playerInFirebase = this.getPlayerKey(player.$key);
+    playerInFirebase.remove();
+  }
+
 }

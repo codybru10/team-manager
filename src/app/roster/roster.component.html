@@ -5,4 +5,7 @@
   <h5>Age: {{player.age}}</h5>
   <h5>Position: {{player.position}}</h5>
   <h5>Points per Game: {{player.points}}</h5>
+  <div *ngIf="currentRoute === '/admin'">
+    <app-edit-player [selectedPlayer]="player"></app-edit-player>
+  </div>
 </div>

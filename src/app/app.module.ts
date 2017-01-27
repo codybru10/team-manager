@@ -11,6 +11,7 @@ import { AdminComponent } from './admin/admin.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
+import { EditPlayerComponent } from './edit-player/edit-player.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,7 +27,8 @@ export const firebaseConfig = {
     AboutComponent,
     RosterComponent,
     AdminComponent,
-    PlayerDetailComponent
+    PlayerDetailComponent,
+    EditPlayerComponent
   ],
   imports: [
     BrowserModule,
