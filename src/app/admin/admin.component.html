@@ -1,4 +1,64 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Album to Inventory</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Name:</label>
+        <br>
+        <input #newName>
+      </div>
 
+      <div>
+        <label>Number:</label>
+        <br>
+        <input #newNumber>
+      </div>
+
+      <div>
+        <label>Age:</label>
+        <br>
+        <input type='number' #newAge>
+      </div>
+
+      <div>
+        <label>Height:</label>
+        <br>
+        <input #newHeight>
+      </div>
+
+      <div>
+        <select>
+          <option value="PG">Point Guard</option>
+          <option value="SG">Shooting Guard</option>
+          <option value="SF">Small Forward</option>
+          <option value="PF">Power Forward</option>
+          <option value="C">Center</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Games Played:</label>
+        <br>
+        <input type='number' #newGp>
+      </div>
+      <div>
+        <label>Minutes per Game:</label>
+        <br>
+        <input type='number' #newMpg>
+      </div>
+
+      <div>
+        <label>Points per Game:</label>
+        <br>
+        <input type='number' #newPoints>
+      </div>
+
+      <!-- <button (click)="submitForm(newName.value, newNumber.value, newAge.value, newHeight.value, newPosition.value, newGp.value, newMpg.value, newPoints.value); newName.value=''; newNumber.value=''; newAge.value=''; newHeight.value=''; newPosition.value=''; newGp.value=''; newMpg.value=''; newPoints.value'';">Add New Player</button> -->
+    </div>
+  </div>
+</div>
 
 <div>
   <app-roster></app-roster>
