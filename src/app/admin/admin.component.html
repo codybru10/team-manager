@@ -29,14 +29,20 @@
       </div>
 
       <div>
-        <select>
+        <label>Position:</label>
+        <br>
+        <input #newPosition>
+      </div>
+
+      <!-- <div>
+        <select class="browser-default">
           <option value="PG">Point Guard</option>
           <option value="SG">Shooting Guard</option>
           <option value="SF">Small Forward</option>
           <option value="PF">Power Forward</option>
           <option value="C">Center</option>
         </select>
-      </div>
+      </div> -->
 
       <div>
         <label>Games Played:</label>
@@ -55,7 +61,8 @@
         <input type='number' #newPoints>
       </div>
 
-      <!-- <button (click)="submitForm(newName.value, newNumber.value, newAge.value, newHeight.value, newPosition.value, newGp.value, newMpg.value, newPoints.value); newName.value=''; newNumber.value=''; newAge.value=''; newHeight.value=''; newPosition.value=''; newGp.value=''; newMpg.value=''; newPoints.value'';">Add New Player</button> -->
+      <button (click)="submitForm(newName.value, newNumber.value, newAge.value, newHeight.value, newPosition.value, newGp.value, newMpg.value, newPoints.value); newName.value=''; newNumber.value=''; newAge.value=''; newHeight.value=''; newPosition.value=''; newGp.value=''; newMpg.value=''; newPoints.value='';">Add New Player</button>
+
     </div>
   </div>
 </div>
