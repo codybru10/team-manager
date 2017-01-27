@@ -10,7 +10,8 @@
   </select>
 </div>
 <br>
-<div *ngFor="let player of players | async | points:filterByPoints" class="well">
+<div *ngFor="let player of players | async | points:filterByPoints" class="well col s8 m6">
+
   <div (click)="goToDetail(player)">
     <h5>Name: {{player.name}}</h5>
     <h5>Age: {{player.age}}</h5>

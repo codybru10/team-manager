@@ -12,3 +12,12 @@
 body {
   padding-bottom: 100px;
 }
+
+.new-form {
+  margin-top: 25px;
+}
+
+.well {
+  box-shadow: 0 0 15px 10px black;
+  background: rgba(255, 255, 255, .08);
+}
