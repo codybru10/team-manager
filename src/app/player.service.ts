@@ -30,6 +30,7 @@ export class PlayerService {
   }
 
   editPlayer(player) {
+    console.log(player);
     var playerInFirebase = this.getPlayerKey(player.$key);
     playerInFirebase.update({name: player.name,
                               number: player.number,
@@ -39,6 +40,12 @@ export class PlayerService {
                               gp: player.gp,
                               mpg: player.mpg,
                               points: player.points});
+  }
+
+  addGame(player) {
+    console.log(player);
+    var playerInFirebase = this.getPlayerKey(player.$key);
+    playerInFirebase.update({gp: parseInt(player.gp) + 1});
   }
 
 }

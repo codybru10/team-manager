@@ -24,4 +24,8 @@ export class EditPlayerComponent implements OnInit {
     this.playerService.editPlayer(playerToEdit);
   }
 
+  beginStats(selectedPlayer) {
+    this.playerService.addGame(selectedPlayer);
+  }
+
 }
