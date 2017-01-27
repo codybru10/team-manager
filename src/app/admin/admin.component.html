@@ -1,10 +1,10 @@
 <div class="loggin .center-align">
-  <div> {{ (af.auth.providerData | async)?.email }} </div>
+  <div> <h4>Welcome: {{ (af.auth | async)?.auth.displayName}}</h4></div>
   <button (click)="login()" class="btn deep-orange">Login</button>
   <button (click)="logout()" class="btn deep-orange">Logout</button>
 </div>
 
-<div *ngIf="currentUser === 'loggedIn'" class="panel panel-default new-form">
+<div class="panel panel-default new-form">
   <div class="panel-heading">
     <h3 class="panel-title">Add New Album to Inventory</h3>
   </div>
@@ -63,6 +63,6 @@
   </div>
 </div>
 
-<div *ngIf="currentUser === 'loggedIn'">
+<div>
   <app-roster></app-roster>
 </div>

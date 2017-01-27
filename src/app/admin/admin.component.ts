@@ -11,9 +11,17 @@ import { AngularFire, AuthProviders } from 'angularfire2';
   providers: [PlayerService]
 })
 export class AdminComponent implements OnInit {
-  currentUser: string = null;
+  currentUser: {};
 
-  constructor(public af: AngularFire, private playerService: PlayerService) { }
+  constructor(public af: AngularFire, private playerService: PlayerService) {
+    this.af.auth.subscribe(auth => {
+      if(auth) {
+        this.currentUser = auth;
+      } else {
+        this.currentUser = {};
+      }
+    });
+  }
 
   ngOnInit() {
   }
@@ -25,13 +33,11 @@ export class AdminComponent implements OnInit {
 
   login() {
     this.af.auth.login();
-    this.currentUser = "loggedIn";
     console.log(this.currentUser);
   }
 
   logout() {
      this.af.auth.logout();
-     this.currentUser = null;
      console.log(this.currentUser);
   }
 
