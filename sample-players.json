@@ -1,0 +1,47 @@
+{ "players": [{
+    "name": "Russel Westbrook",
+    "number": 0,
+    "age": 28,
+    "height": "6-3",
+    "position": "PG",
+    "gp": 5,
+    "mpg": 34.7,
+    "points": 30.7
+    }, {
+    "name": "Victor Oladipo",
+    "number": 5,
+    "age": 24,
+    "height": "6-4",
+    "position": "SG",
+    "gp": 5,
+    "mpg": 33.8,
+    "points": 16.2
+    }, {
+    "name": "Steven Adams",
+    "number": 12,
+    "age": 23,
+    "height": "7-0",
+    "position": "C",
+    "gp": 5,
+    "mpg": 30.1,
+    "points": 12.2
+    }, {
+    "name": "Andre Roberson",
+    "number": 21,
+    "age": 25,
+    "height": "6-7",
+    "position": "SF",
+    "gp": 5,
+    "mpg": 30.9,
+    "points": 6.7
+    }, {
+    "name": "Enes Kanter",
+    "number": 11,
+    "age": 24,
+    "height": "6-11",
+    "position": "C",
+    "gp": 5,
+    "mpg": 21.9,
+    "points": 14.6
+  }]
+}
