@@ -1,31 +1,37 @@
-# TeamManager
+# Team Manager
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+#### _A web app that allows a team manager to manage their roster_
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### By _**Cody Brubaker**_
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Setup/Installation Requirements
 
-## Build
+_Works in any web browser. To run Team Manager, in command line run:_
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+$ git clone https://github.com/codybru10/team-manager
+$ cd team-manager
+$ npm install
+$ bower install
+$ ng serve
+Go to localhost:4200 in your browser to view
+```
 
-## Running unit tests
+## Support and contact details
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+_Contact me Github at codybru10 or cody.brubaker@gmail.com_
 
-## Running end-to-end tests
+## Technologies Used
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+* _Javascript_
+* _Angular 2_
+* _Firebase_
+* _Materialize_
 
-## Deploying to GitHub Pages
 
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
+### License
 
-## Further help
+This software is licensed under the MIT license.
 
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copyright (c) 2016 **_Cody Brubaker**
