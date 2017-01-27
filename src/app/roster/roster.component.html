@@ -1,7 +1,7 @@
 <h2>Roster</h2>
 
 <div *ngFor="let player of players | async" class="well">
-  <h5>Name: {{player.name}}</h5>
+  <h5 (click)="goToDetail(player)">Name: {{player.name}}</h5>
   <h5>Number: {{player.number}}</h5>
   <h5>Age: {{player.age}}</h5>
   <h5>Height: {{player.height}}</h5>
