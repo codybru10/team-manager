@@ -18,6 +18,10 @@ $ ng serve
 Go to localhost:4200 in your browser to view
 ```
 
+OR
+
+Visit https://locations-1482097134153.firebaseapp.com/
+
 ## Support and contact details
 
 _Contact me Github at codybru10 or cody.brubaker@gmail.com_
