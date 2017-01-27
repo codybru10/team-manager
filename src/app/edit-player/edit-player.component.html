@@ -1,3 +1,28 @@
+<h3>Edit Player</h3>
 
-<button>Edit</button>
+<label>Name</label>
+<input [(ngModel)]="selectedPlayer.name">
+
+<label>Number</label>
+<input [(ngModel)]="selectedPlayer.number">
+
+<label>Age</label>
+<input [(ngModel)]="selectedPlayer.age">
+
+<label>Height</label>
+<input [(ngModel)]="selectedPlayer.height">
+
+<label>Position</label>
+<input [(ngModel)]="selectedPlayer.position">
+
+<label>Games Played</label>
+<input [(ngModel)]="selectedPlayer.gp">
+
+<label>Minutes per Game</label>
+<input [(ngModel)]="selectedPlayer.mpg">
+
+<label>Points</label>
+<input [(ngModel)]="selectedPlayer.points">
+
+<button (click)="beginEditPlayer(selectedPlayer)">Edit</button>
 <button (click)="beginDeletePlayer(selectedPlayer)">Delete</button>

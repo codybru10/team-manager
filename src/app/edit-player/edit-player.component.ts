@@ -20,4 +20,8 @@ export class EditPlayerComponent implements OnInit {
     }
   }
 
+  beginEditPlayer(playerToEdit){
+    this.playerService.editPlayer(playerToEdit);
+  }
+
 }

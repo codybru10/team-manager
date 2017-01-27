@@ -29,4 +29,16 @@ export class PlayerService {
     playerInFirebase.remove();
   }
 
+  editPlayer(player) {
+    var playerInFirebase = this.getPlayerKey(player.$key);
+    playerInFirebase.update({name: player.name,
+                              number: player.number,
+                              age: player.age,
+                              height: player.height,
+                              position: player.position,
+                              gp: player.gp,
+                              mpg: player.mpg,
+                              points: player.points});
+  }
+
 }
