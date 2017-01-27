@@ -20,4 +20,8 @@ export class PlayerService {
     this.players.push(newPlayer);
   }
 
+  getPlayerKey(playerKey: string){
+    return this.angularFire.database.object('players/' + playerKey);
+  }
+
 }

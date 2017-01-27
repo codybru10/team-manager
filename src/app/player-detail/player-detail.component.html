@@ -1,3 +1,9 @@
-<p>
-  player-detail works!
-</p>
+<div class="well">
+  <h3>{{(playerToDisplay | async)?.name}} #{{(playerToDisplay | async)?.number}}</h3>
+  <h5>Age: {{(playerToDisplay | async)?.age}}</h5>
+  <h5>Height: {{(playerToDisplay | async)?.height}}</h5>
+  <h5>Position: {{(playerToDisplay | async)?.position}}</h5>
+  <h5>Games Played: {{(playerToDisplay | async)?.gp}}</h5>
+  <h5>Minutes per Game: {{(playerToDisplay | async)?.mpg}}</h5>
+  <h5>Points per Game: {{(playerToDisplay | async)?.points}}</h5>
+</div>
