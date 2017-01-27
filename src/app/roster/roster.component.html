@@ -1,6 +1,16 @@
 <h2>Roster</h2>
 
-<div *ngFor="let player of players | async" class="well">
+<div>
+  <label>Filter By Points</label>
+  <select (change)="onChange($event.target.value)" class="browser-default">
+    <option value="all" selected="selected">All Scorers</option>
+    <option value="high">High Scorers</option>
+    <option value="mid">Mid Scorers</option>
+    <option value="low">Low Scorers</option>
+  </select>
+</div>
+<br>
+<div *ngFor="let player of players | async | points:filterByPoints" class="well">
   <div (click)="goToDetail(player)">
     <h5>Name: {{player.name}}</h5>
     <h5>Age: {{player.age}}</h5>

@@ -13,6 +13,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 export class RosterComponent implements OnInit {
   players: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterByPoints: string = "all";
 
   constructor(private router: Router, private playerService: PlayerService) { }
 
@@ -22,5 +23,9 @@ export class RosterComponent implements OnInit {
 
   goToDetail(clickedPlayer){
     this.router.navigate(['players', clickedPlayer.$key]);
+  }
+
+  onChange(option) {
+    this.filterByPoints = option;
   }
 }
