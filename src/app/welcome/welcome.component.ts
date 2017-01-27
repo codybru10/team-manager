@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AngularFire } from 'angularfire2';
 
 @Component({
   selector: 'app-welcome',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public af: AngularFire) { }
 
   ngOnInit() {
   }

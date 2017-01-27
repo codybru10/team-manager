@@ -9,7 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { RosterComponent } from './roster/roster.component';
 import { AdminComponent } from './admin/admin.component';
 import { masterFirebaseConfig } from './api-keys';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { PointsPipe } from './points.pipe';
@@ -19,6 +19,11 @@ export const firebaseConfig = {
   authDomain: masterFirebaseConfig.authDomain,
   databaseURL: masterFirebaseConfig.databaseURL,
   storageBucket: masterFirebaseConfig.storageBucket
+};
+
+const firebaseAuthConfig = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Popup
 };
 
 @NgModule({
@@ -37,7 +42,7 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,10 @@
-<div class="panel panel-default new-form">
+<div class="loggin .center-align">
+  <div> {{ (af.auth.providerData | async)?.email }} </div>
+  <button (click)="login()" class="btn deep-orange">Login</button>
+  <button (click)="logout()" class="btn deep-orange">Logout</button>
+</div>
+
+<div *ngIf="currentUser === 'loggedIn'" class="panel panel-default new-form">
   <div class="panel-heading">
     <h3 class="panel-title">Add New Album to Inventory</h3>
   </div>
@@ -34,16 +40,6 @@
         <input #newPosition>
       </div>
 
-      <!-- <div>
-        <select class="browser-default">
-          <option value="PG">Point Guard</option>
-          <option value="SG">Shooting Guard</option>
-          <option value="SF">Small Forward</option>
-          <option value="PF">Power Forward</option>
-          <option value="C">Center</option>
-        </select>
-      </div> -->
-
       <div>
         <label>Games Played:</label>
         <br>
@@ -67,6 +63,6 @@
   </div>
 </div>
 
-<div>
+<div *ngIf="currentUser === 'loggedIn'">
   <app-roster></app-roster>
 </div>

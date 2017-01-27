@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../player.model';
 import { PlayerService } from '../player.service';
+import { AngularFire, AuthProviders } from 'angularfire2';
+
 
 @Component({
   selector: 'app-admin',
@@ -9,8 +11,9 @@ import { PlayerService } from '../player.service';
   providers: [PlayerService]
 })
 export class AdminComponent implements OnInit {
+  currentUser: string = null;
 
-  constructor(private playerService: PlayerService) { }
+  constructor(public af: AngularFire, private playerService: PlayerService) { }
 
   ngOnInit() {
   }
@@ -19,5 +22,18 @@ export class AdminComponent implements OnInit {
     var newPlayer: Player = new Player(name, number, age, height, position, gp, mpg, points);
     this.playerService.addPlayer(newPlayer);
   }
+
+  login() {
+    this.af.auth.login();
+    this.currentUser = "loggedIn";
+    console.log(this.currentUser);
+  }
+
+  logout() {
+     this.af.auth.logout();
+     this.currentUser = null;
+     console.log(this.currentUser);
+  }
+
 
 }
