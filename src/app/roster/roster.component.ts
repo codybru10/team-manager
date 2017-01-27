@@ -17,7 +17,6 @@ export class RosterComponent implements OnInit {
 
   ngOnInit() {
     this.players = this.playerService.getPlayers();
-    console.log(this.players);
   }
 
 }

@@ -9,7 +9,7 @@ export class PlayerService {
   players: FirebaseListObservable<any[]>;
 
   constructor(private angularFire: AngularFire) {
-    this.players = angularFire.database.list('albums');
+    this.players = angularFire.database.list('players');
    }
 
   getPlayers() {
